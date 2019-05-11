@@ -6,10 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  serverCreationStatus = 'No server created.';
+  serverName = '';
+  userNameDisplay = 'No user detected.';
+  userName = '';
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
   }
 
+  onCreateServer() {
+    this.serverCreationStatus = this.serverName + ' was created.';
+  }
+
+  onCreateUser() {
+    this.userNameDisplay = this.userName + ' was created.';
+  }
+
+  // onUpdateServerName(event: any) {
+  //   this.serverName = (event.target as HTMLInputElement).value;
+  // }
 }

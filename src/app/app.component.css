@@ -3,5 +3,13 @@ h1 {
 }
 
 app-servers {
-    color: aqua
+    color: aqua;
+}
+
+app-success-alert {
+    color: green;
+}
+
+app-warning-alert {
+    color: red;
 }
