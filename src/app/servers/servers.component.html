@@ -3,10 +3,5 @@
 <button class="btn btn-primary" [disabled]="!serverName" (click)="onCreateServer()">
     Add Server
 </button>
-<p>{{ serverCreationStatus }}</p>
-
-<input type="text" class="form-control" [(ngModel)]="userName">
-<button class="btn btn-primary" [disabled]="!userName" (click)="onCreateUser()">
-    Add User
-</button>
-<p>{{ userNameDisplay }}</p>
+<p *ngIf="serveBool; else noServer">{{ serverCreationStatus }}</p>
+<ng-template #noServer><p>No server has been created.</p></ng-template>
