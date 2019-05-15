@@ -9,6 +9,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = '';
   serveBool = false;
   serverName = '';
+  serverList = ['Test'];
 
   constructor() {
    }
@@ -18,6 +19,7 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serveBool = true;
+    this.serverList.push(this.serverName);
     this.serverCreationStatus = this.serverName + ' was created.';
     this.serverName = null;
   }
